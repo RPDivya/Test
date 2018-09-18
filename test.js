@@ -40,7 +40,7 @@ var R=new RuleEngine();
         R.register(rule);
         
         R.execute(fact, function(data){
-            console.log(data);
+           
             if(data.result){
                 console.log("SUCCESS");
                 sendmail(data.name);
@@ -67,14 +67,14 @@ function sendmail(name){
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'divya@gmail.com',
+        user: 'test@gmail.com',
         pass: 'test'
       }
     });
     
     var mailOptions = {
-      from: 'divya@gmail.com',
-     to: 'divya.r1@photoninfotech.net',
+      from: 'test@gmail.com',
+     to: 'test1@gamil.com',
       subject: 'Congrats ',
      html: '<h1>Hi '+name+'.....</h1><p>TEST</p>',
     };
